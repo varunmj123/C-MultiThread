@@ -1,0 +1,22 @@
+How to compile the C++ implementation of Linux terminal 
+
+Step 1: Install gcc
+$ sudo apt-get install build-essential
+
+Step 2:Go to the folder where scheduler.c is saved
+
+Step3: Make an executable file for the program using the gcc command called executable-file-name
+gcc program-source-code.c -o executable-file-name
+
+Step 4: Compile scheduler.c using the cc command 
+cc scheduler.c -0 scheduler
+
+Step 5: If there is no error given when compiling the code we can use ./ to run the code
+./scheduler
+
+Step 6:Once the code runs it will ask the user for the following inputs:
+-Enter number of jobs to create: User enters an integer input for the number of requests the master thread makes during this execution
+-Enter the max request duration (in seconds): User enters an integer input for the longest number of second a request can take
+-Enter the wait time for master (in seconds): User enters an integer input for the timeout of the master thread/producer
+
+Step 7: After all the inputs have been given to the program, the code will initiate and produce the Master Thread and slave threads that will produce tasks and include timeouts based on the user inputs 
